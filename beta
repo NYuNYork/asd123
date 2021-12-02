@@ -1,0 +1,26 @@
+class Kosarasok :
+    def __init__(self, jatekos, magasság):
+        self.Jatekos = jatekos
+        self.Magasság = magasság
+
+kosarasok = []
+
+a = 1
+while len(kosarasok) < 5:
+    jatekos = input(f' {a}. Játékos neve: ')
+    if jatekos == '': break
+    magasság = int(input(f' {a}. Játékos magassága: '))
+    kosarasok.append(Kosarasok(jatekos, magasság))
+    a += 1
+    sum = 0
+
+    # for d in kosarasok: 
+    #     sum += d.Magasság
+        
+    # print(f'átlag magasság {sum / len(kosarasok)} ')
+    # if magasság >= 210:
+    #     print(f'{jatekos}')
+print('210cm-nél magasabb játékos: ')
+for i in range(0, len(kosarasok)):
+    if kosarasok[i] .Magasság > 210:
+        print(f'{kosarasok[i] .Jatekos}')
